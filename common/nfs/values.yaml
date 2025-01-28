@@ -1,0 +1,13 @@
+namespace: media
+
+downloads:
+  ip: "192.168.42.2"
+  path: "/mnt/trending/downloads"
+
+series:
+  ip: "192.168.42.2"
+  path: "/mnt/trending/series"
+
+movies:
+  ip: "192.168.42.2"
+  path: "/mnt/trending/movies"
