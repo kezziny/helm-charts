@@ -97,6 +97,19 @@ entries:
   sonarr:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-02-01T14:15:44.117980917Z"
+    dependencies:
+    - name: volumes-tpl
+      repository: file://../volumes-tpl
+      version: 1.0.0
+    digest: 9ca63405fff88dc1ea4c06a894143b43b9b2ff59639eb706e8ecaf8919a5a499
+    name: sonarr
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/sonarr-1.0.4/sonarr-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-02-01T13:01:48.454947594Z"
     dependencies:
     - name: volumes-tpl
@@ -157,4 +170,4 @@ entries:
     urls:
     - https://github.com/kezziny/helm-charts/releases/download/volumes-tpl-1.0.0/volumes-tpl-1.0.0.tgz
     version: 1.0.0
-generated: "2025-02-01T13:03:38.921264169Z"
+generated: "2025-02-01T14:15:44.118054174Z"
