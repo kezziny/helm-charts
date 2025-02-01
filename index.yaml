@@ -1,5 +1,19 @@
 apiVersion: v1
 entries:
+  duplicati:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-02-01T12:02:22.772035204Z"
+    dependencies:
+    - name: volumes-tpl
+      repository: file://../volumes-tpl
+      version: 1.0.0
+    digest: 10d379d7dae880aeff0b048f932c8d73895fcda8f4a61d2ee22b97e2244459d8
+    name: duplicati
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/duplicati-1.0.2/duplicati-1.0.2.tgz
+    version: 1.0.2
   media:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -18,6 +32,19 @@ entries:
     - https://github.com/kezziny/helm-charts/releases/download/media-1.0.0/media-1.0.0.tgz
     version: 1.0.0
   mount:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-02-01T12:02:22.866197483Z"
+    dependencies:
+    - name: volumes-tpl
+      repository: file://../volumes-tpl
+      version: 1.0.0
+    digest: b0a433f8ac60a016647cdaabe07a2d4c657b679cb157a58ecd9474fdd00f96d1
+    name: mount
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/mount-1.0.2/mount-1.0.2.tgz
+    version: 1.0.2
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2025-02-01T11:31:04.558302813Z"
@@ -57,6 +84,19 @@ entries:
   sonarr:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-02-01T12:02:22.988088852Z"
+    dependencies:
+    - name: volumes-tpl
+      repository: file://../volumes-tpl
+      version: 1.0.0
+    digest: 1fc0a10ff1848673d74c2f64b4e7ab5af6dce61d248810990f5b98c86b73847a
+    name: sonarr
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/sonarr-1.0.2/sonarr-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-02-01T11:31:04.715858669Z"
     dependencies:
     - name: volumes-tpl
@@ -91,4 +131,4 @@ entries:
     urls:
     - https://github.com/kezziny/helm-charts/releases/download/volumes-tpl-1.0.0/volumes-tpl-1.0.0.tgz
     version: 1.0.0
-generated: "2025-02-01T11:31:04.715868257Z"
+generated: "2025-02-01T12:02:22.988114971Z"
