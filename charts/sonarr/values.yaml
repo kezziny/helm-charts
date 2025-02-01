@@ -1,0 +1,16 @@
+namespace: media
+#name: sonarr
+
+tailscale:
+  dns: sonarr.curl-decibel.ts.net
+
+volumes:
+  - pvc: config
+    attach: /config
+    create:
+      type: longhorn
+      capacity: 1Gi
+  - pvc: tv
+    attach: /tv
+  - pvc: downloads
+    attach: /dowloads

@@ -1,0 +1,33 @@
+mount:
+  volumes:
+    - pvc: downloads
+      nfs:
+        server: 192.168.42.11
+        path: /downloads
+
+sonarr:
+  env:
+    TZ: Europe/Budapest
+  volumes:
+    - pvc: config:/config
+      longhorn: {}
+    - pvc: tv:/tv
+      nfs:
+        server: 192.168.42.11
+        path: /mnt/tv
+    - pvc: downloads:/downloads
+
+radarr:
+  env:
+    TZ: Europe/Budapest
+  volumes:
+    - pvc: config
+      attach: /config
+      longhorn: {}
+    - pvc: movies
+      attach: /movies
+      nfs:
+        server: 192.168.42.11
+        path: /mnt/movies
+    - pvc: downloads
+      attach: /dowloads

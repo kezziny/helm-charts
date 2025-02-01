@@ -1,0 +1,6 @@
+dependencies:
+- name: volumes-tpl
+  repository: file://../volumes-tpl
+  version: 1.0.0
+digest: sha256:a6bd0918a97fc1d2b1638a752bcf2a6fc0228dfde3d2e7a29f6c07f7fc8021e9
+generated: "2025-01-30T18:06:31.263154222+01:00"

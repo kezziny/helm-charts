@@ -1,0 +1,10 @@
+volumes:
+  - pvc: pvc1
+    nfs:
+      server: 192.168.1.1
+      path: /path
+      options:
+        - asd
+  - pvc: pvc2
+    longhorn:
+      capacity: 1Gi
