@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "service.name" . }}
+  namespace: {{ include "service.namespace" . }}
+  labels:
+    {{- include "deployment.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "deployment.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "deployment.selectorLabels" . | nindent 8 }}
+    spec:
+      volumes:
+        {{- range $volume := .Values.volumes }}
+        {{ $parts := split ":" $volume.pvc }}
+        - name: {{ $parts._0 }}
+          value: {{ $parts._0 }}
+        {{- end }}
+      containers:
+        - name: {{ include "service.name" . }}
+          image: lscr.io/linuxserver/duplicati:latest
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            {{- range $volume := .Values.volumes }}
+            {{ $parts := split ":" $volume.pvc }}
+            - name: {{ $parts._0 }}
+              mountPath: {{ $parts._1 }}
+            {{- end }}
+          ports:
+            - name: http
+              containerPort: 8200
+              protocol: TCP
+          env:
+            {{- range $k,$v := .Values.env }}
+            - name: {{ $k }}
+              value: {{ $v | quote }}
+            {{- end }}
+          livenessProbe:
+            httpGet:
+              path: /ngax/index.html
+              port: http
+            failureThreshold: 12
+            periodSeconds: 10
+          startupProbe:
+            httpGet:
+              path: /ngax/index.html
+              port: http
+            failureThreshold: 30
+            periodSeconds: 10
