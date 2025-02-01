@@ -20,6 +20,19 @@ entries:
   mount:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-02-01T11:31:04.558302813Z"
+    dependencies:
+    - name: volumes-tpl
+      repository: https://kezziny.github.io/helm-charts
+      version: 1.0.0
+    digest: 2c08c6b91a50446d2d86685ec2954e9c6263097d45df426d3f8a5ca80acdd588
+    name: mount
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/mount-1.0.1/mount-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-02-01T11:07:21.833005415Z"
     dependencies:
     - name: volumes-tpl
@@ -44,6 +57,19 @@ entries:
   sonarr:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-02-01T11:31:04.715858669Z"
+    dependencies:
+    - name: volumes-tpl
+      repository: https://kezziny.github.io/helm-charts
+      version: 1.0.0
+    digest: 94e26af0fa66b667e9c6c1d95fe78880b2349c2625a3326be5ffd32af3478c68
+    name: sonarr
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/sonarr-1.0.1/sonarr-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-02-01T11:07:21.951651565Z"
     dependencies:
     - name: volumes-tpl
@@ -65,4 +91,4 @@ entries:
     urls:
     - https://github.com/kezziny/helm-charts/releases/download/volumes-tpl-1.0.0/volumes-tpl-1.0.0.tgz
     version: 1.0.0
-generated: "2025-02-01T11:07:22.06458812Z"
+generated: "2025-02-01T11:31:04.715868257Z"
