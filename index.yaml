@@ -1,5 +1,36 @@
 apiVersion: v1
 entries:
+  media:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-02-01T11:07:21.71010876Z"
+    dependencies:
+    - name: sonarr
+      repository: file://../sonarr
+      version: 1.0.0
+    - name: mount
+      repository: file://../mount
+      version: 1.0.0
+    digest: dc24aaba12a9569be55dfb59db9bd65af43f24075f8e02700392d06783b142a8
+    name: media
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/media-1.0.0/media-1.0.0.tgz
+    version: 1.0.0
+  mount:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-02-01T11:07:21.833005415Z"
+    dependencies:
+    - name: volumes-tpl
+      repository: file://../volumes-tpl
+      version: 1.0.0
+    digest: f3c5ed586d68cb31c69a80ea7b50287c14d23010f6091545ca3c80e482765bee
+    name: mount
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/mount-1.0.0/mount-1.0.0.tgz
+    version: 1.0.0
   nfs:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -10,4 +41,28 @@ entries:
     urls:
     - https://github.com/kezziny/helm-charts/releases/download/nfs-1.0.1/nfs-1.0.1.tgz
     version: 1.0.1
-generated: "2025-01-28T07:54:11.386696219Z"
+  sonarr:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-02-01T11:07:21.951651565Z"
+    dependencies:
+    - name: volumes-tpl
+      repository: file://../volumes-tpl
+      version: 1.0.0
+    digest: 97e112e5eedc5b753e89c64fe7ef175148b16cb55fbf64924c547e81b51abda4
+    name: sonarr
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/sonarr-1.0.0/sonarr-1.0.0.tgz
+    version: 1.0.0
+  volumes-tpl:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-02-01T11:07:22.064582871Z"
+    digest: fb1826011105de4a965caf2a599aba3c3f4025f727f1ea40244c1e842caab061
+    name: volumes-tpl
+    type: library
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/volumes-tpl-1.0.0/volumes-tpl-1.0.0.tgz
+    version: 1.0.0
+generated: "2025-02-01T11:07:22.06458812Z"
