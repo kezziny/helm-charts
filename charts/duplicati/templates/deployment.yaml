@@ -19,7 +19,8 @@ spec:
         {{- range $volume := .Values.volumes }}
         {{ $parts := split ":" $volume.pvc }}
         - name: {{ $parts._0 }}
-          value: {{ $parts._0 }}
+          persistentVolumeClaim:
+            claimName: {{ $parts._0 }}
         {{- end }}
       containers:
         - name: {{ include "service.name" . }}
