@@ -47,6 +47,19 @@ entries:
   mount:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-02-02T10:02:32.127838256Z"
+    dependencies:
+    - name: base-template
+      repository: file://../../library/base-template
+      version: 1.0.0
+    digest: c1339857026446d3359859978a348cd7603d8be911cfa9a72bc29520471f5d60
+    name: mount
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/mount-1.1.0/mount-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-02-01T12:02:22.866197483Z"
     dependencies:
     - name: volumes-tpl
@@ -170,4 +183,4 @@ entries:
     urls:
     - https://github.com/kezziny/helm-charts/releases/download/volumes-tpl-1.0.0/volumes-tpl-1.0.0.tgz
     version: 1.0.0
-generated: "2025-02-01T14:15:44.118054174Z"
+generated: "2025-02-02T10:02:32.127862912Z"
