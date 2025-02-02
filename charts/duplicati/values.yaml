@@ -15,9 +15,6 @@ volumes:
   config:
     pvc: config
     path: /config
-  source:
-    pvc: source
-    path: /source
 
 ha:
   probe:
