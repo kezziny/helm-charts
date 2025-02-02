@@ -4,8 +4,8 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: {{ $parts._0 }}
-  {{ if (include "service.namespace" .)}}
-  namespace: {{ include "service.namespace" . }}
+  {{ if (include "service.namespace" $)}}
+  namespace: {{ include "service.namespace" $ }}
   {{ end }}
 spec:
   storageClassName: {{ .pvc }}

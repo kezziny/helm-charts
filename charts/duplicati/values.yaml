@@ -1,3 +1,5 @@
+name: duplicati
+
 image:
   url: lscr.io/linuxserver/duplicati:latest
 

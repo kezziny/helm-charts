@@ -1,9 +1,0 @@
-dependencies:
-- name: sonarr
-  repository: file://../sonarr
-  version: 1.0.0
-- name: mount
-  repository: file://../mount
-  version: 1.0.0
-digest: sha256:133e582f8345c32c4420869ddf5ce2343bd390343f9c9ac8014e493a7ed7e6e8
-generated: "2025-01-30T18:07:06.695653349+01:00"

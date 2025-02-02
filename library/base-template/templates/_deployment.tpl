@@ -2,23 +2,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "service.name" . }}
-  {{ if (include "service.namespace" .)}}
-  namespace: {{ include "service.namespace" . }}
+  name: {{ include "service.name" $ }}
+  {{ if (include "service.namespace" $)}}
+  namespace: {{ include "service.namespace" $ }}
   {{ end }}
   labels:
-    {{- include "deployment.labels" . | nindent 4 }}
+    {{- include "deployment.labels" $ | nindent 4 }}
 spec:
   {{ if and (hasKey $.Values "ha") (hasKey $.Values.ha "replicas") }}
   replicas: {{ $.Values.replicas | default 1 }}
   {{ end }}
   selector:
     matchLabels:
-      {{- include "deployment.selectorLabels" . | nindent 6 }}
+      {{- include "deployment.selectorLabels" $ | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "deployment.selectorLabels" . | nindent 8 }}
+        {{- include "deployment.selectorLabels" $ | nindent 8 }}
     spec:
       volumes:
         {{- range $name, $volume := $.Values.volumes }}
@@ -27,7 +27,7 @@ spec:
             claimName: {{ $volume.pvc }}
         {{- end }}
       containers:
-        - name: {{ include "service.name" . }}
+        - name: {{ include "service.name" $ }}
           image: {{ $.Values.image }}
           imagePullPolicy: {{ $.Values.imagePullPolicy | default "IfNotPresent" }}
           volumeMounts:
