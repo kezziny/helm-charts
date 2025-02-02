@@ -3,23 +3,23 @@
 {{- end }}
 
 {{- define "service.name" -}}
-{{- default .Chart.Name .Values.name | trunc 63 | trimSuffix "-" }}
+{{- default $.Chart.Name $.Values.name | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{- define "service.chart" -}}
-{{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
+{{- printf "%s-%s" $.Chart.Name $.Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{- define "deployment.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "service.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
+app.kubernetes.io/instance: {{ $.Release.Name }}
 {{- end }}
 
 {{- define "deployment.labels" -}}
 helm.sh/chart: {{ include "service.chart" . }}
 {{ include "deployment.selectorLabels" . }}
-{{- if .Chart.AppVersion }}
-app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+{{- if $.Chart.AppVersion }}
+app.kubernetes.io/version: {{ $.Chart.AppVersion | quote }}
 {{- end }}
-app.kubernetes.io/managed-by: {{ .Release.Service }}
+app.kubernetes.io/managed-by: {{ $.Release.Service }}
 {{- end }}
