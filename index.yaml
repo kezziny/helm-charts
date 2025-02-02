@@ -3,6 +3,19 @@ entries:
   duplicati:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-02-02T16:05:12.547749539Z"
+    dependencies:
+    - name: base-template
+      repository: file://../../library/base-template
+      version: 1.0.0
+    digest: bbcc70d7d3e066f482ae9187e208f905cf3c701f423aa4f3f4ba6edda34fe6bf
+    name: duplicati
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/duplicati-1.1.3/duplicati-1.1.3.tgz
+    version: 1.1.3
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-02-02T12:36:46.80914314Z"
     dependencies:
     - name: base-template
@@ -73,6 +86,19 @@ entries:
   mount:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-02-02T16:05:12.628001775Z"
+    dependencies:
+    - name: base-template
+      repository: file://../../library/base-template
+      version: 1.0.0
+    digest: 2d183caa925561a64ca233552021da494e46ac3767ada96f4d245047b2186ff1
+    name: mount
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/mount-1.1.1/mount-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-02-02T10:02:32.127838256Z"
     dependencies:
     - name: base-template
@@ -133,7 +159,48 @@ entries:
     urls:
     - https://github.com/kezziny/helm-charts/releases/download/nfs-1.0.1/nfs-1.0.1.tgz
     version: 1.0.1
+  prowlarr:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-02-02T16:05:12.730430873Z"
+    dependencies:
+    - name: base-template
+      repository: file://../../library/base-template
+      version: 1.0.0
+    digest: dbb465020ad2cc49a578dbf5c3fd552e5088a9dc5d51f766b20a1d5806d11a6f
+    name: prowlarr
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/prowlarr-1.1.1/prowlarr-1.1.1.tgz
+    version: 1.1.1
+  radarr:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-02-02T16:05:12.83620053Z"
+    dependencies:
+    - name: base-template
+      repository: file://../../library/base-template
+      version: 1.0.0
+    digest: 898153554b82b53cd4cb53fb820c43120170e6abfd6eb2b719683df10541d453
+    name: radarr
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/radarr-1.1.1/radarr-1.1.1.tgz
+    version: 1.1.1
   sonarr:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-02-02T16:05:12.954492919Z"
+    dependencies:
+    - name: base-template
+      repository: file://../../library/base-template
+      version: 1.0.0
+    digest: a4841f687ad99d71af5f2d5f44575f275f05eb0447f7c700140bf4ca4c532dea
+    name: sonarr
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/sonarr-1.1.1/sonarr-1.1.1.tgz
+    version: 1.1.1
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2025-02-01T14:15:44.117980917Z"
@@ -209,4 +276,4 @@ entries:
     urls:
     - https://github.com/kezziny/helm-charts/releases/download/volumes-tpl-1.0.0/volumes-tpl-1.0.0.tgz
     version: 1.0.0
-generated: "2025-02-02T12:36:46.809171443Z"
+generated: "2025-02-02T16:05:12.954549564Z"
