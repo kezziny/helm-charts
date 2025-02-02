@@ -1,0 +1,32 @@
+# replicas: 1
+
+image:
+  url: linuxserver
+  # imagePullPolicy: IfNotPresent
+
+ports:
+  http:
+    port: 8989
+    protocol: TCP
+
+env:
+  KEY: value
+
+volumes:
+  config:
+    pvc: pvc1
+    path: /config
+  downloads:
+    pvc: pvc2
+    path: /downloads
+
+ha:
+  replicas: 1
+  startupProbe:
+    path: /ping
+    failureThreshold: 30
+    periodSeconds: 30
+  livenessProbe:
+    path: /ping
+    failureThreshold: 30
+    periodSeconds: 30

@@ -1,0 +1,27 @@
+image:
+  url: lscr.io/linuxserver/radarr:latest
+
+ports:
+  http:
+    port: 
+      container: 7878
+      service: 80
+
+env:
+  TZ: Etc/UTC
+
+volumes:
+  config:
+    pvc: config
+    path: /config
+  tv:
+    pvc: movies
+    path: /movies
+  downloads:
+    pvc: downloads
+    path: /dowloads
+
+ha:
+  probe:
+    port: http
+    path: /ping

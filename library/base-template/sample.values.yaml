@@ -33,12 +33,14 @@ ha:
     port: http
     path: /ping
   #startupProbe:
-    #port: http
-    #path: /ping
-    #failureThreshold: 30
-    #periodSeconds: 30
+    #httpGet:
+      #port: http
+      #path: /ping
+      #failureThreshold: 30
+      #periodSeconds: 30
   #livenessProbe:
-    #port: http
-    #path: /ping
-    #failureThreshold: 30
-    #periodSeconds: 30
+    #httpGet:
+      #port: http
+      #path: /ping
+      #failureThreshold: 30
+      #periodSeconds: 30

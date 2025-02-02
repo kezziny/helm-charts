@@ -1,5 +1,5 @@
 {{- define "service.namespace" -}}
-{{- default "media" .Values.namespace | trunc 63 | trimSuffix "-" }}
+{{- $.Values.namespace | default "" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{- define "service.name" -}}

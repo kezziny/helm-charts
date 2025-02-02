@@ -4,6 +4,6 @@ type: application
 version: 1.0.2
 appVersion: "1.0.0"
 dependencies:
-- name: volumes-tpl
+- name: base-template
   version: 1.0.0
-  repository: file://../volumes-tpl
+  repository: file://../../library/base-template

@@ -1,16 +1,25 @@
-namespace: media
-#name: sonarr
+image:
+  url: lscr.io/linuxserver/duplicati:latest
 
-tailscale:
-  dns: sonarr.curl-decibel.ts.net
+ports:
+  http:
+    port: 
+      container: 8200
+      service: 80
+
+env:
+  TZ: Etc/UTC
+  SETTINGS_ENCRYPTION_KEY: verysecret
 
 volumes:
-  - pvc: config
-    attach: /config
-    create:
-      type: longhorn
-      capacity: 1Gi
-  - pvc: tv
-    attach: /tv
-  - pvc: downloads
-    attach: /dowloads
+  config:
+    pvc: config
+    path: /config
+  source:
+    pvc: source
+    path: /source
+
+ha:
+  probe:
+    port: http
+    path: /ngax/index.html
