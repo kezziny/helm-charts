@@ -96,6 +96,19 @@ entries:
   homepage:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-02-03T16:22:18.199682607Z"
+    dependencies:
+    - name: template
+      repository: file://../../template
+      version: 1.0.0
+    digest: 3370412c2d7781164a5e8ba2dd75e8ec901a2f6b55b585b4100c29f284a51c1d
+    name: homepage
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/homepage-1.1.6/homepage-1.1.6.tgz
+    version: 1.1.6
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-02-03T16:10:47.999363633Z"
     dependencies:
     - name: template
@@ -369,4 +382,4 @@ entries:
     urls:
     - https://github.com/kezziny/helm-charts/releases/download/volumes-tpl-1.0.0/volumes-tpl-1.0.0.tgz
     version: 1.0.0
-generated: "2025-02-03T16:10:47.999420539Z"
+generated: "2025-02-03T16:22:18.199759812Z"
