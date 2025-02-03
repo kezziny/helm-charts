@@ -1,26 +1,26 @@
 {{- define "nfs.pv.tpl" -}}
-{{ $parts := split ":" .pvc }}
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: {{ $parts._0 }}
-  {{ if (include "service.namespace" $)}}
-  namespace: {{ include "service.namespace" $ }}
+  name: {{ .volume.pvc }}
+  namespace:
+  {{ if (include "service.namespace" .root )}}
+  namespace: {{ include "service.namespace" .root }}
   {{ end }}
 spec:
-  storageClassName: {{ .pvc }}
+  storageClassName: {{ .volume.pvc }}
   persistentVolumeReclaimPolicy: Retain
   capacity:
     storage: "1Mi"
   accessModes:
-    - {{ default "ReadWriteMany" .nfs.accessMode }}
+    - {{ default "ReadWriteMany" .volume.nfs.accessMode }}
   nfs:
-    server: {{ .nfs.server }}
-    path: {{ .nfs.path }}
-    readOnly: {{ default false .nfs.readOnly }}
+    server: {{ .volume.nfs.server }}
+    path: {{ .volume.nfs.path }}
+    readOnly: {{ default false .volume.nfs.readOnly }}
   mountOptions:
-    {{ if hasKey .nfs "options" }}
-    {{- range $option := .nfs.options }}
+    {{ if hasKey .volume.nfs "options" }}
+    {{- range $option := .volume.nfs.options }}
     - {{ $option }}
     {{- end }}
     {{ else }}

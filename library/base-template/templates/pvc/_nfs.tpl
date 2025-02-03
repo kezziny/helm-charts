@@ -1,17 +1,16 @@
 {{- define "nfs.pvc.tpl" -}}
-{{ $parts := split ":" .pvc }}
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: {{ $parts._0 }}
-  {{ if (include "service.namespace" $)}}
-  namespace: {{ include "service.namespace" $ }}
+  name: {{ .volume.pvc }}
+  {{ if (include "service.namespace" .root )}}
+  namespace: {{ include "service.namespace" .root }}
   {{ end }}
 spec:
   accessModes:
-    - {{ default "ReadWriteMany" .nfs.accessMode }}
+    - {{ default "ReadWriteMany" .volume.nfs.accessMode }}
   resources:
     requests:
       storage: "1Mi"
-  storageClassName: {{ $parts._0 }}
+  storageClassName: {{ .volume.pvc }}
 {{- end -}}
