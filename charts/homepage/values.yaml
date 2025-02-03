@@ -1,4 +1,4 @@
-name: duplicati
+#name: homepage
 
 image:
   url: helm-charts/charts/adguard
