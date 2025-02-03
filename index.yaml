@@ -1,5 +1,19 @@
 apiVersion: v1
 entries:
+  adguard:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-02-03T16:10:47.890343058Z"
+    dependencies:
+    - name: base-template
+      repository: file://../../library/base-template
+      version: 1.0.0
+    digest: 7fa54fecb196d09c0a3bdd9f59bab5b1d282c40334fccffb36ef22eb88613c0a
+    name: adguard
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/adguard-1.1.5/adguard-1.1.5.tgz
+    version: 1.1.5
   duplicati:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -79,6 +93,20 @@ entries:
     urls:
     - https://github.com/kezziny/helm-charts/releases/download/duplicati-1.0.2/duplicati-1.0.2.tgz
     version: 1.0.2
+  homepage:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-02-03T16:10:47.999363633Z"
+    dependencies:
+    - name: template
+      repository: file://../../template
+      version: 1.0.0
+    digest: ad6ce774c818fc8b3c1572784cf674832c707fa853363420e4e31dcd56910981
+    name: homepage
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/homepage-1.1.5/homepage-1.1.5.tgz
+    version: 1.1.5
   media:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -341,4 +369,4 @@ entries:
     urls:
     - https://github.com/kezziny/helm-charts/releases/download/volumes-tpl-1.0.0/volumes-tpl-1.0.0.tgz
     version: 1.0.0
-generated: "2025-02-03T12:13:55.504622696Z"
+generated: "2025-02-03T16:10:47.999420539Z"
