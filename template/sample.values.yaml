@@ -1,0 +1,46 @@
+#name: sonarr
+#namespace: media
+
+image:
+  url: lscr.io/linuxserver/sonarr:latest
+  #imagePullPolicy: IfNotPresent
+
+ports:
+  http:
+    port: 
+      container: 8989
+      service: 80
+    #protocol: TCP
+    #tailscale: <dns>
+
+env:
+  TZ: Etc/UTC
+
+volumes:
+  config:
+    pvc: config
+    path: /config
+  tv:
+    pvc: tv
+    path: /tv
+  downloads:
+    pvc: downloads
+    path: /dowloads
+
+ha:
+  #replicas: 1
+  probe:
+    port: http
+    path: /ping
+  #startupProbe:
+    #httpGet:
+      #port: http
+      #path: /ping
+      #failureThreshold: 30
+      #periodSeconds: 30
+  #livenessProbe:
+    #httpGet:
+      #port: http
+      #path: /ping
+      #failureThreshold: 30
+      #periodSeconds: 30

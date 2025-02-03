@@ -1,0 +1,23 @@
+name: duplicati
+
+image:
+  url: adguard/adguardhome:latest
+
+ports:
+  http:
+    port: 
+      container: 8200
+      service: 80
+
+env:
+  TZ: Etc/UTC
+
+volumes:
+  config:
+    pvc: config
+    path: /config
+
+#ha:
+#  probe:
+#    port: http
+#    path: /ngax/index.html

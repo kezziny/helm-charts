@@ -1,0 +1,9 @@
+apiVersion: v2
+name: adguard
+type: application
+version: 1.1.5
+appVersion: "1.0.0"
+dependencies:
+- name: base-template
+  version: 1.0.0
+  repository: file://../../library/base-template
