@@ -1,7 +1,8 @@
 #name: homepage
 
 image:
-  url: ghcr.io/gethomepage/homepage:latest
+  url: ghcr.io/gethomepage/homepage
+  version: latest
 
 ports:
   http:

@@ -1,7 +1,8 @@
 name: duplicati
 
 image:
-  url: lscr.io/linuxserver/duplicati:latest
+  url: lscr.io/linuxserver/duplicati
+  version: latest
 
 ports:
   http:
