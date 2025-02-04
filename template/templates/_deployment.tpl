@@ -35,7 +35,7 @@ spec:
         {{- end }}
       containers:
         - name: {{ include "service.name" $ }}
-          image: {{ $.Values.image.url }}:{{ $.Values.image.version }}
+          image: {{ print .Values.image.url ":" .Values.image.version }}
           imagePullPolicy: {{ $.Values.imagePullPolicy | default "IfNotPresent" }}
           volumeMounts:
             {{- range $name,$volume := .Values.volumes }}
