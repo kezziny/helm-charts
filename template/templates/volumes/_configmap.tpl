@@ -9,6 +9,6 @@ metadata:
 data:
   {{- range $name, $value := .volume.configMap.data }}
   {{$name}}: |
-  {{ toYaml .volume.configMap.data | nindent 4 }}
+  {{ toYaml $value | nindent 4 }}
   {{- end }}
 {{- end -}}
