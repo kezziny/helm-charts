@@ -7,7 +7,7 @@ metadata:
   namespace: {{ include "service.namespace" .root }}
   {{ end }}
 data:
-  {{- range $name, $@alue := .volume.configMap.data }}
+  {{- range $name, $value := .volume.configMap.data }}
   {{$name}}: |
   {{ toYaml .volume.configMap.data | nindent 4 }}
   {{- end }}
