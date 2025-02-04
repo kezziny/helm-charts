@@ -17,6 +17,19 @@ entries:
   duplicati:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-02-04T12:54:12.320061928Z"
+    dependencies:
+    - name: template
+      repository: file://../../template
+      version: 1.0.0
+    digest: 95428c816ffcfd75b2b03ba5c20985e68245aa5803f4a92c5cc68fa4b134e3cd
+    name: duplicati
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/duplicati-1.1.10/duplicati-1.1.10.tgz
+    version: 1.1.10
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-02-04T10:57:25.815576642Z"
     dependencies:
     - name: template
@@ -146,6 +159,19 @@ entries:
     - https://github.com/kezziny/helm-charts/releases/download/duplicati-1.0.2/duplicati-1.0.2.tgz
     version: 1.0.2
   homepage:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-02-04T12:54:12.452210452Z"
+    dependencies:
+    - name: template
+      repository: file://../../template
+      version: 1.0.0
+    digest: 5328a9a64302b734c9679cbf2dd82d1d41a5472f33578d21aa38a1ea95a0cc68
+    name: homepage
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/homepage-1.1.21/homepage-1.1.21.tgz
+    version: 1.1.21
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2025-02-04T11:09:18.44093174Z"
@@ -512,4 +538,4 @@ entries:
     urls:
     - https://github.com/kezziny/helm-charts/releases/download/volumes-tpl-1.0.0/volumes-tpl-1.0.0.tgz
     version: 1.0.0
-generated: "2025-02-04T11:09:18.441009505Z"
+generated: "2025-02-04T12:54:12.452347907Z"
