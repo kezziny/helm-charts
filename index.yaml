@@ -109,6 +109,19 @@ entries:
   homepage:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-02-04T10:48:50.568153578Z"
+    dependencies:
+    - name: template
+      repository: file://../../template
+      version: 1.0.0
+    digest: 1d954c09ccfc897c44ff9f0a992cb2aee301da5b066f42af540467a69fd215d3
+    name: homepage
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/homepage-1.1.7/homepage-1.1.7.tgz
+    version: 1.1.7
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-02-03T16:22:18.199682607Z"
     dependencies:
     - name: template
@@ -296,6 +309,19 @@ entries:
   sonarr:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-02-04T10:48:50.654996155Z"
+    dependencies:
+    - name: template
+      repository: file://../../template
+      version: 1.0.0
+    digest: 1588e8655942fafe0ea202525d83867995744c88b8f86d7973607c55ca2a8bf5
+    name: sonarr
+    type: application
+    urls:
+    - https://github.com/kezziny/helm-charts/releases/download/sonarr-1.1.7/sonarr-1.1.7.tgz
+    version: 1.1.7
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-02-04T10:34:04.775195484Z"
     dependencies:
     - name: template
@@ -408,4 +434,4 @@ entries:
     urls:
     - https://github.com/kezziny/helm-charts/releases/download/volumes-tpl-1.0.0/volumes-tpl-1.0.0.tgz
     version: 1.0.0
-generated: "2025-02-04T10:39:51.073716144Z"
+generated: "2025-02-04T10:48:50.655099007Z"
